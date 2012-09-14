@@ -13,11 +13,11 @@ import argparse
 import os
 import psutil
 
-import argumentparser
-import settings
-import emailing
-import mounting
-import rsnapshot
+from . import argumentparser
+from . import settings
+from . import emailing
+from . import mounting
+from . import rsnapshot
 
 
 def changeDir():

@@ -5,7 +5,6 @@
 
 BACKUPSSETTINGS_SECTION = "BackupSettings"
 MOUNTPOINT_OPTION = "Mountpoint"  # Optional
-CONFIG_OPTION = "ConfigFile"
 
 EMAIL_SECTION="EmailSettings"
 SMTP_HOST_OPTION="Host"
@@ -93,7 +92,6 @@ class BackupSettings(Settings):
         super(BackupSettings, self).__init__(settings_path)
         self.mount = None
         self.mountpoint = None
-        self.configFile = None
     
     def load(self):
         config = super(BackupSettings, self).load()
@@ -101,11 +99,6 @@ class BackupSettings(Settings):
             config[BACKUPSSETTINGS_SECTION]
         except KeyError as e:
             raise SettingsError("Settings file does not contain required section: " + repr(e))
-        
-        try:
-            self.configFile = config[BACKUPSSETTINGS_SECTION][CONFIG_OPTION]
-        except KeyError as e:
-            raise SettingsError("Settings file does not contain required option: " + repr(e))
         
         self.mount = False
         self.mountpoint = None
