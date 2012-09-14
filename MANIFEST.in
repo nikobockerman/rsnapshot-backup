@@ -1,0 +1,4 @@
+include COPYING 
+include etc/emailsettings.cfg
+include etc/example/rsnapshot.conf
+include etc/example/settings.cfg
