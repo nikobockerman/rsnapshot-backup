@@ -12,12 +12,12 @@ RSNAPSHOTCONF_FILENAME = "rsnapshot.conf"
 import argparse
 import os
 import psutil
-import argumentparser
 
-import .settings
-import .emailing
-import .mounting
-import .rsnapshot
+import argumentparser
+import settings
+import emailing
+import mounting
+import rsnapshot
 
 
 def changeDir():
