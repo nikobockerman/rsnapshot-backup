@@ -1,4 +1,4 @@
 include COPYING 
-include etc/emailsettings.cfg
-include etc/example/rsnapshot.conf
-include etc/example/settings.cfg
+include etc/rsnapshot-backup/emailsettings.cfg
+include etc/rsnapshot-backup/example/rsnapshot.conf
+include etc/rsnapshot-backup/example/settings.cfg
