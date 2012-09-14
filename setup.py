@@ -9,7 +9,7 @@ import os.path, sys
 
 setup(
     name = 'rsnapshot-backup',
-    version = '1.0a2',
+    version = '1.0_alpha2',
     author = 'Niko Böckerman',
     author_email = 'niko.bockerman@gmail.com',
     url = 'https://github.com/nikobockerman/rsnapshot-backup',
