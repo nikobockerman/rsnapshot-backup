@@ -2,3 +2,24 @@ rsnapshot-backup
 ================
 
 Wrapper for rsnapshot. Emails rsnapshot output when rsnapshot is not executed successfully. Allows mounting external filesystem before executing rsnapshot and unmounting afterwards.
+
+Settings:
+
+- email-settings.cfg
+This file contains settings for sending email. Check the default file for required variables.
+
+- folders under /etc/rsnapshot-backup
+Every folder represents a backup job. The name of the folder is the name of the backup job.
+Every backup job folder contains two files:
+  - settings.cfg
+  This file currently only contains one optional settings: mount point for mounting and unmounting before and after running rsnapshot
+  - rsnapshot.conf
+  This file is a complete config file which is passed to rsnapshot as config file parameter.
+
+
+Calling rsnapshot-backup:
+rsnapshot-backup <backup job name> <retain>
+
+That call will result to this rsnapshot call:
+rsnapshot -c /etc/rsnapshot-backup/<backup job name>/rsnapshot.conf <retain>
+
